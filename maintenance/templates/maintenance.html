@@ -1,0 +1,29 @@
+{% load static %}{% block html %}{% if not request.META.HTTP_X_PJAX %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        {% endif %}
+        <title>Maintenance</title>
+        <link rel="shortcut icon" type="image/png" href="{% static "img/favicon.png" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "closedverse.css" %}">
+        <link id="darkness" rel="stylesheet" type="text/css" href="{% static "blueness.css" %}">
+        <script src="{% static "jslibs.js" %}"></script>
+        <script src="{% static "closedverse.js" %}"></script>
+    </head>
+
+    <body class="" {% if request.user.is_authenticated %}sess-usern="{{ request.user.username }}"{% endif %}>
+        <div id="wrapper">
+            <div id="sub-body">
+                <div class="warning-content warning-content-restricted track-error">
+                    <div>
+                        <img src="{% static "img/restricted.png" %}">
+                        <h2><strong>Information</strong></h2>
+                        <p>Blueverse is currently undergoing some <strong>maintenance</strong>.</p>
+                        <p>Please try again later.</p>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock html %}

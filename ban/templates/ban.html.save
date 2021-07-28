@@ -1,0 +1,12 @@
+{% load static %}{% block html %}{% if not request.META.HTTP_X_PJAX %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        {% endif %}
+        <title>Banned! - Closedverse</title>
+        <link rel="shortcut icon" type="image/png" href="{% static "img/favicon.png" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "closedverse.css" %}">
+        <link id="darkness" rel="stylesheet" type="text/css" href="{% static "blueness.css" %}">
+        <script src="{% static "jslibs.js" %}">
+        <sc

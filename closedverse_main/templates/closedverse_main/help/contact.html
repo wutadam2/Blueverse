@@ -1,0 +1,20 @@
+{% extends "closedverse_main/layout.html" %}
+{% block main-body %}{% load closedverse_user %}
+{% user_sidebar request user user.profile 0 True %}
+<div class="main-column" id="help">
+<div class="post-list-outline">
+    <h2 class="label">Where even do I contact you, anyway?</h2>
+    <div id="guide" class="help-content">
+      <div class="faq">
+        <p>Great question! He're an answer!</p>
+		
+		<h2>Rix56</h2>
+		<ul>
+		<li><a href="/users/Rix56">My account here.</a> You can message me there.</li>
+             
+        
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
